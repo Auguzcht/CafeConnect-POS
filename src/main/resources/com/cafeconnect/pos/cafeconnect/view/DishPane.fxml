@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.image.Image?>
+
+<Pane fx:id="DishPane" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cafeconnect.pos.cafeconnect.DishPaneController" onMouseClicked="#DishPaneClicked">
+    <children>
+        <ImageView fx:id="DishCard" fitHeight="350.0" fitWidth="273.0" layoutX="-1.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../images/DishCard.png" />
+            </image>
+        </ImageView>
+        <Circle fx:id="DishFrame" fill="WHITE" layoutX="132.0" layoutY="101.0" radius="80.0" stroke="WHITE" strokeType="INSIDE">
+            <effect>
+                <javafx.scene.effect.DropShadow height="50.31" radius="25.387500000000003" width="53.24" />
+            </effect>
+        </Circle>
+        <Text fx:id="DishName" id="DishName" fill="WHITE" fontSmoothingType="LCD" layoutX="19.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dish Name" textAlignment="CENTER" wrappingWidth="228.66664123535156">
+            <font>
+                <Font name="Barlow Light" size="25.0" />
+            </font>
+        </Text>
+        <Text fx:id="DishPrice" id="DishPrice" fill="WHITE" fontSmoothingType="LCD" layoutX="8.0" layoutY="315.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price (₱)" textAlignment="CENTER" wrappingWidth="249.99998474121094">
+            <font>
+                <Font name="Barlow Light" size="25.0" />
+            </font>
+        </Text>
+        <Text fx:id="DishStock" id="DishStock" fill="WHITE" fontSmoothingType="LCD" layoutX="8.0" layoutY="366.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0 Available" textAlignment="CENTER" wrappingWidth="249.99998474121094">
+            <font>
+                <Font name="Barlow Light" size="25.0" />
+            </font>
+        </Text>
+    </children>
+</Pane>

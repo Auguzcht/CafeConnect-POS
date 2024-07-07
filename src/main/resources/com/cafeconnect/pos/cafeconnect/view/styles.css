@@ -1,0 +1,92 @@
+.custom-button {
+    -fx-background-color: #464646; /* Background color for SignInBtn */
+}
+
+.custom-button:hover {
+    -fx-background-color: #666666; /* Lighter background color on hover */
+}
+
+.custom-button:pressed {
+    -fx-background-color: #333333; /* Darker background color when pressed or focused */
+}
+
+.custom-button2 {
+    -fx-background-color: #FFFFFF; /* Background color for CreateBtn */
+    -fx-border-color: black; /* Black border */
+    -fx-border-width: 2px; /* Border width */
+}
+
+.custom-button2:hover {
+    -fx-background-color: #DDDDDD; /* Lighter background color on hover */
+}
+
+.custom-button2:pressed {
+    -fx-background-color: #CCCCCC; /* Darker background color when pressed or focused */
+}
+
+.custom-button3 {
+    -fx-background-color: #464646;
+    -fx-border-color: #FFA180;
+    -fx-border-width: 2px;
+}
+
+.custom-button3:hover {
+    -fx-background-color: #666666;
+}
+
+.custom-button3:pressed {
+    -fx-background-color: #333333; /* Darker background color when pressed or focused */
+}
+
+.text-field {
+    -fx-background-color: transparent; /* Make the background transparent */
+    -fx-border-width: 0; /* Remove the border */
+}
+
+/* Add product fields */
+.text-field-style {
+    -fx-background-color: #FFFFFF; /* Light gray background */
+    -fx-border-color: #333; /* Dark gray outline */
+    -fx-border-width: 2; /* Border width */
+    -fx-border-radius: 5; /* Border radius for rounded corners */
+    -fx-background-radius: 5; /* Background radius to match border */
+    -fx-padding: 5; /* Padding inside the text field */
+}
+
+/* Toggle button styles */
+.toggle-button {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #DDDDDD;
+    -fx-border-width: 2px; /* Added 'px' unit */
+}
+
+.toggle-button:selected {
+    -fx-background-color: #A1857B;
+    -fx-border-color: transparent; /* Optional: Remove border when selected */
+    -fx-border-width: 0; /* Optional: Remove border when selected */
+}
+
+
+/* Default style for all Sidebuttons */
+.side-button {
+    -fx-background-color: #464646;
+    -fx-background-radius: 0;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+}
+
+/* Style for pressed sidebutton state */
+.side-button:selected {
+    -fx-background-color: #A1857B;
+}
+
+/* Side edges */
+.side-edge {
+    -fx-opacity: 0; /* Start with edges hidden */
+}
+
+/* Style for side edges images when side-button is selected */
+.side-button:selected + .side-edge {
+    -fx-opacity: 1; /* Show edges */
+}
+

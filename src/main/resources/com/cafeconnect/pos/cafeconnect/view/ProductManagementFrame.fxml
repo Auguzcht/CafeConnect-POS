@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ProductManagementAnchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1200.0" prefWidth="2000.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cafeconnect.pos.cafeconnect.ProductManagementFrame">
+   <children>
+      <Pane fx:id="AddDishFrame" prefHeight="1200.0" prefWidth="2000.0">
+         <children>
+            <ImageView fx:id="DishFrameImage" fitHeight="1200.0" fitWidth="2000.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/AddAndEditDishFrame.png" />
+               </image>
+            </ImageView>
+            <Circle fx:id="DishFrame" fill="WHITE" layoutX="999.0" layoutY="315.0" onMouseClicked="#DishFrameClicked" radius="125.0" stroke="WHITE" strokeType="INSIDE">
+               <effect>
+                  <DropShadow height="50.31" radius="25.387500000000003" width="53.24" />
+               </effect>
+            </Circle>
+            <TextField fx:id="DishNameField" layoutX="774.0" layoutY="572.0" opacity="0.4" prefHeight="57.0" prefWidth="453.0" promptText="Enter dish name">
+               <font>
+                  <Font name="Barlow Light" size="29.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="DishPriceField" layoutX="774.0" layoutY="675.0" opacity="0.4" prefHeight="57.0" prefWidth="218.0" promptText="Enter Price">
+               <font>
+                  <Font name="Barlow Light" size="29.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="DishStockField" layoutX="1009.0" layoutY="675.0" opacity="0.4" prefHeight="57.0" prefWidth="218.0" promptText="Enter Stock">
+               <font>
+                  <Font name="Barlow Light" size="29.0" />
+               </font>
+            </TextField>
+            <Button fx:id="CancelBtn" contentDisplay="CENTER" layoutX="774.0" layoutY="950.0" mnemonicParsing="false" onMouseClicked="#ProductBtnClicked" prefHeight="64.0" prefWidth="219.0" styleClass="custom-button2" text="Cancel" textAlignment="CENTER" textFill="#464646" wrapText="true">
+               <font>
+                  <Font name="Barlow SemiBold" size="25.0" />
+               </font>
+            </Button>
+            <Button fx:id="AddBtn" contentDisplay="CENTER" layoutX="1012.0" layoutY="950.0" mnemonicParsing="false" onMouseClicked="#ProductBtnClicked" prefHeight="64.0" prefWidth="215.0" styleClass="custom-button3" text="Add" textAlignment="CENTER" textFill="#ffa180" wrapText="true">
+               <font>
+                  <Font name="Barlow SemiBold" size="25.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane fx:id="EditDishFrame" prefHeight="1200.0" prefWidth="2000.0">
+         <children>
+            <ImageView fx:id="DishFrameImage" fitHeight="1200.0" fitWidth="2000.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/AddAndEditDishFrame.png" />
+               </image>
+            </ImageView>
+            <Circle fx:id="DishFrame" fill="WHITE" layoutX="999.0" layoutY="315.0" onMouseClicked="#DishFrameClicked" radius="125.0" stroke="WHITE" strokeType="INSIDE">
+               <effect>
+                  <DropShadow height="50.31" radius="25.387500000000003" width="53.24" />
+               </effect>
+            </Circle>
+            <TextField fx:id="DishNameField1" layoutX="774.0" layoutY="572.0" opacity="0.4" prefHeight="57.0" prefWidth="453.0" promptText="Enter dish name">
+               <font>
+                  <Font name="Barlow Light" size="29.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="DishPriceField1" layoutX="774.0" layoutY="675.0" opacity="0.4" prefHeight="57.0" prefWidth="218.0" promptText="Enter Price">
+               <font>
+                  <Font name="Barlow Light" size="29.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="DishStockField1" layoutX="1009.0" layoutY="675.0" opacity="0.4" prefHeight="57.0" prefWidth="218.0" promptText="Enter Stock">
+               <font>
+                  <Font name="Barlow Light" size="29.0" />
+               </font>
+            </TextField>
+            <Button fx:id="CancelBtn" contentDisplay="CENTER" layoutX="774.0" layoutY="950.0" mnemonicParsing="false" onMouseClicked="#ProductBtnClicked" prefHeight="64.0" prefWidth="219.0" styleClass="custom-button2" text="Cancel" textAlignment="CENTER" textFill="#464646" wrapText="true">
+               <font>
+                  <Font name="Barlow SemiBold" size="25.0" />
+               </font>
+            </Button>
+            <Button fx:id="EditBtn" contentDisplay="CENTER" layoutX="1012.0" layoutY="950.0" mnemonicParsing="false" onMouseClicked="#ProductBtnClicked" prefHeight="64.0" prefWidth="215.0" styleClass="custom-button3" text="Edit" textAlignment="CENTER" textFill="#ffa180" wrapText="true">
+               <font>
+                  <Font name="Barlow SemiBold" size="25.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane fx:id="UpdateLoginFrame" prefHeight="1200.0" prefWidth="2000.0">
+         <children>
+            <ImageView fx:id="UpdateLoginImage" fitHeight="1200.0" fitWidth="2000.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/UpdatePasswordFrame.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="CurrentPasswordField" layoutX="588.0" layoutY="491.0" onKeyPressed="#SearchKeyPressed" prefHeight="54.0" prefWidth="824.0" promptText="Enter old password here">
+               <font>
+                  <Font name="Barlow Light" size="28.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="NewPasswordField" layoutX="588.0" layoutY="595.0" onKeyPressed="#SearchKeyPressed" prefHeight="54.0" prefWidth="824.0" promptText="Enter new password here">
+               <font>
+                  <Font name="Barlow Light" size="28.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="NewPasswordField1" layoutX="588.0" layoutY="699.0" onKeyPressed="#SearchKeyPressed" prefHeight="54.0" prefWidth="824.0" promptText="Re-type new password here">
+               <font>
+                  <Font name="Barlow Light" size="28.0" />
+               </font>
+            </TextField>
+            <ToggleButton fx:id="CancelLoginBtn" contentDisplay="CENTER" layoutX="753.0" layoutY="780.0" mnemonicParsing="false" onMouseClicked="#EditAccountBtnClick" prefHeight="71.0" prefWidth="221.0" styleClass="custom-button2" text="Cancel" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="Barlow Light" size="25.0" />
+               </font>
+            </ToggleButton>
+            <ToggleButton fx:id="ConfirmLoginBtn" contentDisplay="CENTER" layoutX="1001.0" layoutY="780.0" mnemonicParsing="false" onMouseClicked="#EditAccountBtnClick" prefHeight="71.0" prefWidth="246.0" styleClass="custom-button3" text="Confirm" textAlignment="CENTER" textFill="#ffa180" wrapText="true">
+               <font>
+                  <Font name="Barlow Light" size="25.0" />
+               </font>
+            </ToggleButton>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

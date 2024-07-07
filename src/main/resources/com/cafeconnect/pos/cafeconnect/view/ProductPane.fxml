@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="ProductPane" prefHeight="391.0" prefWidth="0.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cafeconnect.pos.cafeconnect.ProductPaneController">
+    <children>
+        <!-- Existing Product Pane -->
+        <Pane fx:id="ExistingProductPane" layoutX="9.0" layoutY="2.0" onMouseClicked="#EditDishClick" prefHeight="387.0" prefWidth="304.0">
+            <children>
+                <ImageView fx:id="ProductImage" fitHeight="389.0" fitWidth="297.0" layoutX="5.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/ProductBtn.png" />
+                    </image>
+                </ImageView>
+                <Circle fx:id="DishFrame" fill="WHITE" layoutX="149.0" layoutY="100.0" radius="80.0" stroke="WHITE" strokeType="INSIDE">
+                    <effect>
+                        <DropShadow height="50.31" radius="25.387500000000003" width="53.24" />
+                    </effect>
+                </Circle>
+                <Text fx:id="DishName" fill="WHITE" fontSmoothingType="LCD" layoutX="34.0" layoutY="223.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dish Name" textAlignment="CENTER" wrappingWidth="228.66664123535156">
+                    <font>
+                        <Font name="Barlow Light" size="25.0" />
+                    </font>
+                </Text>
+                <Text fx:id="DishPrice" fill="WHITE" fontSmoothingType="LCD" layoutX="41.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price (₱)" textAlignment="CENTER" wrappingWidth="98.25000000000006">
+                    <font>
+                        <Font name="Barlow Light" size="20.0" />
+                    </font>
+                </Text>
+                <Text fx:id="DishStock" fill="WHITE" fontSmoothingType="LCD" layoutX="142.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0 Available" textAlignment="CENTER" wrappingWidth="127.0">
+                    <font>
+                        <Font name="Barlow Light" size="20.0" />
+                    </font>
+                </Text>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

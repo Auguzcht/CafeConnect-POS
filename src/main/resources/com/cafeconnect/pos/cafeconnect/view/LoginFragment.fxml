@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="1200.0" prefWidth="2000.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cafeconnect.pos.cafeconnect.LoginFragment">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+      <Rectangle fx:id="backgroundColor" arcHeight="5.0" arcWidth="5.0" fill="#464646" height="1200.0" stroke="BLACK" strokeType="INSIDE" width="2000.0" />
+      <ImageView fx:id="backgroundImage" fitHeight="1200.0" fitWidth="2000.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/BackgroundImage.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="image1" fitHeight="1060.0" fitWidth="780.0" layoutX="81.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Logo.png" />
+         </image>
+         <viewport>
+            <Rectangle2D width="780.0" />
+         </viewport></ImageView>
+      <ImageView fx:id="LoginText" fitHeight="131.0" fitWidth="610.0" layoutX="155.0" layoutY="340.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Text.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="Username" fitHeight="117.0" fitWidth="658.0" layoutX="151.0" layoutY="469.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Username.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="Password" fitHeight="117.0" fitWidth="658.0" layoutX="151.0" layoutY="588.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Password.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="UsernameField" layoutX="221.0" layoutY="520.0" opacity="0.4" prefHeight="65.0" prefWidth="539.0" promptText="Enter username here" styleClass="text-field">
+         <font>
+            <Font name="Barlow Light" size="30.0" />
+         </font></TextField>
+      <TextField fx:id="PasswordField" layoutX="221.0" layoutY="639.0" opacity="0.4" prefHeight="65.0" prefWidth="539.0" promptText="Enter password here" styleClass="text-field">
+         <font>
+            <Font name="Barlow Light" size="30.0" />
+         </font>
+      </TextField>
+      <Button fx:id="SignInBtn" contentDisplay="CENTER" layoutX="151.0" layoutY="833.0" mnemonicParsing="false" onMouseClicked="#SignInBtnClicked" prefHeight="67.0" prefWidth="620.0" text="Sign-In" textAlignment="CENTER" textFill="WHITE" wrapText="true" styleClass="custom-button">
+         <font>
+            <Font name="Barlow SemiBold" size="25.0" />
+         </font>
+      </Button>
+      <Button fx:id="CreateBtn" contentDisplay="CENTER" layoutX="151.0" layoutY="961.0" mnemonicParsing="false" onMouseClicked="#CreateBtnClicked" prefHeight="67.0" prefWidth="620.0" text="Create an Account" textAlignment="CENTER" wrapText="true" styleClass="custom-button2">
+         <font>
+            <Font name="Barlow SemiBold" size="25.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="OrDivider" fitHeight="36.0" fitWidth="580.0" layoutX="221.0" layoutY="913.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Or.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="AccountExistError" fitHeight="60.0" fitWidth="619.0" layoutX="183.0" layoutY="737.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../images/AccountExistError.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="IncorrectUserPassError" fitHeight="60.0" fitWidth="619.0" layoutX="184.0" layoutY="748.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../images/IncorrectUsernameAndPasswordError.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="EmptyFieldError" fitHeight="60.0" fitWidth="619.0" layoutX="185.0" layoutY="738.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../images/EmptyFieldError.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="NoAccountFoundError" fitHeight="60.0" fitWidth="619.0" layoutX="185.0" layoutY="738.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../images/NoAccountFoundError.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

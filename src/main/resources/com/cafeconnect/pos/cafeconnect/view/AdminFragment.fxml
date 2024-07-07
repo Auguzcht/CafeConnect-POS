@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="AdminAnchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1200.0" prefWidth="1823.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cafeconnect.pos.cafeconnect.AdminFragment">
+   <children>
+      <ImageView fx:id="Sidebar1" fitHeight="1044.0" fitWidth="439.0" layoutX="23.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/SideBar1.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="StaffName" fill="#a1857b" layoutX="21.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin" wrappingWidth="333.33331298828114">
+         <font>
+            <Font name="Barlow SemiBold" size="55.0" />
+         </font>
+      </Text>
+      <ToggleButton fx:id="ProductManagementBtn" layoutX="23.0" layoutY="148.0" mnemonicParsing="false" onMouseClicked="#AdminBtnClicked" prefHeight="120.0" prefWidth="430.0" selected="true" styleClass="side-button">
+         <graphic>
+            <ImageView fx:id="ProductManagementImage" fitHeight="124.0" fitWidth="413.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/ProductManagementBtn.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <toggleGroup>
+            <ToggleGroup fx:id="sidebarAdminToggle" />
+         </toggleGroup>
+      </ToggleButton>
+      <ToggleButton fx:id="StaffRecordBtn" layoutX="23.0" layoutY="268.0" mnemonicParsing="false" onMouseClicked="#AdminBtnClicked" prefHeight="120.0" prefWidth="430.0" styleClass="side-button" toggleGroup="$sidebarAdminToggle">
+         <graphic>
+            <ImageView fx:id="StaffRecordImage" fitHeight="121.0" fitWidth="402.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/StaffBtn.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </ToggleButton>
+      <AnchorPane fx:id="ProductAnchor" layoutX="459.0" prefHeight="1200.0" prefWidth="1362.0">
+         <children>
+            <ImageView fitHeight="1052.0" fitWidth="1326.0" layoutX="21.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/AdminBG.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="ProductText" fill="WHITE" layoutX="51.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product Management" wrappingWidth="637.3333129882811">
+               <font>
+                  <Font name="Barlow SemiBold" size="63.0" />
+               </font>
+            </Text>
+            <Button fx:id="EmailProductBtn" contentDisplay="CENTER" layoutX="1093.0" layoutY="176.0" mnemonicParsing="false" onMouseClicked="#ProductBtnClicked" prefHeight="64.0" prefWidth="216.0" styleClass="custom-button2" textAlignment="CENTER" textFill="#ffa180" wrapText="true">
+               <font>
+                  <Font name="Barlow SemiBold" size="25.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="EmailProductImage" fitHeight="47.0" fitWidth="208.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Email.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+         <ScrollPane fx:id="ProductScrollPane" layoutX="54.0" layoutY="268.0" prefHeight="794.0" prefWidth="1257.0">
+          <content>
+              <TilePane fx:id="ProductTilePane" prefHeight="792.0" prefWidth="1255.0">
+                  <children>
+                     <Pane fx:id="AddProductPane" layoutY="4.0" onMouseClicked="#AddNewDishClicked" prefHeight="387.0" prefWidth="312.0">
+                        <children>
+                            <ImageView fx:id="AddProductImage" fitHeight="382.0" fitWidth="299.0" layoutX="14.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                                <image>
+                                    <Image url="@../images/AddProductBtn.png" />
+                                </image>
+                            </ImageView>
+                        </children>
+                    </Pane>
+                  </children>
+              </TilePane>
+          </content>
+      </ScrollPane>
+      </AnchorPane>
+      <AnchorPane fx:id="StaffRecordAnchor" layoutX="459.0" prefHeight="1200.0" prefWidth="1362.0" visible="false">
+         <children>
+            <ImageView fx:id="DateSidebar" fitHeight="1046.0" fitWidth="358.0" layoutX="21.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/DateSidebar.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="DateSidebar1" fitHeight="1055.0" fitWidth="976.0" layoutX="365.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/StaffBG.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="ProductText1" fill="WHITE" layoutX="392.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Staff Record" wrappingWidth="637.3333129882811">
+               <font>
+                  <Font name="Barlow SemiBold" size="63.0" />
+               </font>
+            </Text>
+            <Button fx:id="EmailStaffBtn" contentDisplay="CENTER" layoutX="1093.0" layoutY="176.0" mnemonicParsing="false" onMouseClicked="#ProductBtnClicked" prefHeight="64.0" prefWidth="216.0" styleClass="custom-button2" textAlignment="CENTER" textFill="#ffa180" wrapText="true">
+               <font>
+                  <Font name="Barlow SemiBold" size="25.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="EmailStaffImage" fitHeight="47.0" fitWidth="208.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Email.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <ScrollPane fx:id="StaffScrollPane" hbarPolicy="NEVER" layoutX="395.0" layoutY="268.0" prefHeight="876.0" prefWidth="916.0" vbarPolicy="ALWAYS">
+               <content>
+                  <TilePane fx:id="StaffTilePane" prefHeight="873.0" prefWidth="900.0">
+                     <children>
+                        <Pane fx:id="StaffPane" prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <Circle fx:id="ImageFrame" fill="WHITE" layoutX="94.0" layoutY="86.0" radius="61.0" stroke="WHITE" strokeType="INSIDE">
+                                 <effect>
+                                    <DropShadow height="50.31" radius="25.387500000000003" width="53.24" />
+                                 </effect>
+                              </Circle>
+                              <Text fx:id="TimeInVal" layoutX="359.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00:00" textAlignment="CENTER" wrappingWidth="141.333282470703">
+                                 <font>
+                                    <Font name="Barlow SemiBold" size="30.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="TimeOutVal" layoutX="509.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00:00" textAlignment="CENTER" wrappingWidth="141.333282470703">
+                                 <font>
+                                    <Font name="Barlow SemiBold" size="30.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="TimeInText" layoutX="359.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time-In" textAlignment="CENTER" wrappingWidth="141.333282470703">
+                                 <font>
+                                    <Font name="Barlow Light" size="30.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="TimeOutText" layoutX="509.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time-Out" textAlignment="CENTER" wrappingWidth="141.333282470703">
+                                 <font>
+                                    <Font name="Barlow Light" size="30.0" />
+                                 </font>
+                              </Text>
+                              <ToggleButton fx:id="OpenerBtn" contentDisplay="CENTER" layoutX="717.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#StaffSchedBtnClicked" prefHeight="65.0" prefWidth="172.0" text="10AM-7PM" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="Barlow Light" size="25.0" />
+                                 </font>
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="scheduleToggle" />
+                                 </toggleGroup>
+                              </ToggleButton>
+                              <ToggleButton fx:id="CloserBtn" contentDisplay="CENTER" layoutX="717.0" layoutY="92.0" mnemonicParsing="false" onMouseClicked="#StaffSchedBtnClicked" prefHeight="65.0" prefWidth="172.0" text="4PM-12AM" textAlignment="CENTER" toggleGroup="$scheduleToggle" wrapText="true">
+                                 <font>
+                                    <Font name="Barlow Light" size="25.0" />
+                                 </font>
+                              </ToggleButton>
+                              <Text fx:id="TotalWorkTime" layoutX="191.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0 hrs 0 mins" wrappingWidth="173.333282470703">
+                                 <font>
+                                    <Font name="Barlow Light" size="30.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="StaffName" layoutX="194.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" wrappingWidth="271.33331298828114">
+                                 <font>
+                                    <Font name="Barlow SemiBold" size="35.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </Pane>
+                     </children>
+                  </TilePane>
+               </content>
+            </ScrollPane>
+            <ScrollPane fx:id="DateScrollPane" hbarPolicy="NEVER" layoutX="49.0" layoutY="161.0" prefHeight="983.0" prefWidth="263.0" vbarPolicy="ALWAYS">
+               <content>
+                  <TilePane fx:id="DateTilePane" prefHeight="981.0" prefWidth="248.0" vgap="20.0">
+                     <children>
+                        <ToggleButton fx:id="DateBtn" mnemonicParsing="false" onMouseClicked="#StaffDateBtnClicked" prefHeight="90.0" prefWidth="246.0" selected="true" styleClass="side-button" text="Day, Date, Month" textAlignment="CENTER">
+                           <font>
+                              <Font name="Barlow SemiBold" size="20.0" />
+                           </font>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="dateToggle" />
+                           </toggleGroup>
+                        </ToggleButton>
+                     </children>
+                  </TilePane>
+               </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+      <Pane fx:id="AddDishFrame" layoutX="-5.0" prefHeight="1200.0" prefWidth="1826.0" visible="false">
+       <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#464646" height="876.0" layoutX="599.0" layoutY="162.0" stroke="#464646" strokeType="INSIDE" width="497.0">
+               <effect>
+                  <DropShadow radius="12.1975" width="29.79" />
+               </effect>
+            </Rectangle>
+           <Circle fx:id="DishFrame" fill="WHITE" layoutX="846.0" layoutY="315.0" onMouseClicked="#DishFrameClicked" radius="125.0" stroke="WHITE" strokeType="INSIDE">
+               <effect>
+                   <DropShadow height="50.31" radius="25.387500000000003" width="53.24" />
+               </effect>
+           </Circle>
+           <TextField fx:id="DishNameField" layoutX="621.0" layoutY="572.0" prefHeight="57.0" prefWidth="453.0" promptText="Enter dish name" styleClass="text-field-style">
+               <font>
+                   <Font name="Barlow Light" size="29.0" />
+               </font>
+           </TextField>
+           <TextField fx:id="DishPriceField" layoutX="621.0" layoutY="675.0" prefHeight="57.0" prefWidth="218.0" promptText="Enter Price" styleClass="text-field-style">
+               <font>
+                   <Font name="Barlow Light" size="29.0" />
+               </font>
+           </TextField>
+           <TextField fx:id="DishStockField" layoutX="856.0" layoutY="675.0" prefHeight="57.0" prefWidth="218.0" promptText="Enter Stock" styleClass="text-field-style">
+               <font>
+                   <Font name="Barlow Light" size="29.0" />
+               </font>
+           </TextField>
+           <Button fx:id="CancelBtn" contentDisplay="CENTER" layoutX="621.0" layoutY="950.0" mnemonicParsing="false" onMouseClicked="#cancelBtnClicked" prefHeight="64.0" prefWidth="219.0" styleClass="custom-button2" text="Cancel" textAlignment="CENTER" textFill="#464646" wrapText="true">
+               <font>
+                   <Font name="Barlow SemiBold" size="25.0" />
+               </font>
+           </Button>
+           <Button fx:id="AddBtn" contentDisplay="CENTER" layoutX="859.0" layoutY="950.0" mnemonicParsing="false" onMouseClicked="#addBtnClicked" prefHeight="64.0" prefWidth="215.0" styleClass="custom-button3" text="Confirm" textAlignment="CENTER" textFill="#ffa180" wrapText="true">
+               <font>
+                   <Font name="Barlow SemiBold" size="25.0" />
+               </font>
+           </Button>
+            <Text fill="WHITE" layoutX="620.0" layoutY="558.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name of the dish">
+               <font>
+                  <Font name="Barlow Light" size="30.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="620.0" layoutY="662.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price (₱)">
+               <font>
+                  <Font name="Barlow Light" size="30.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="855.0" layoutY="662.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Stock (Qty)">
+               <font>
+                  <Font name="Barlow Light" size="30.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="660.0" layoutY="491.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose a photo here!">
+               <font>
+                  <Font name="Barlow SemiBold" size="40.0" />
+               </font>
+            </Text>
+       </children>
+   </Pane>
+   </children>
+</AnchorPane>
